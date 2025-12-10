@@ -1,14 +1,19 @@
 #include<stdio.h>
 #include<string.h>
-int main(){
-    char sec[7]="";
-    printf("##deviner un sequence secrete de nombre en minimun 10 esais##");
-    int i=0;
+int defi_mastermind(){
+    char sec[7] = "1234567";
+    printf("\n=== Defi mastermind ===\n");
+    printf("Deviner la sequence secrete (7 chiffres). 10 essais maximum.\n");
+    int k=0;
     int fini =1;
-    while(i<10&&fini==1){
+    while(k<10&&fini==1){
         char esai[7];
-        printf("\ndonner le esai :");
-        scanf("%s",esai);
+        printf("\ndonner le esai : ");
+       
+            scanf("%s",esai);
+            if(strlen(esai) != 7) {
+            printf(" Vous devez entrer exactement 8 caracteres.\n");}
+        else{
         int mal=0;
         int bon=0;
         for(int i=0;i<7;i++){
@@ -17,8 +22,13 @@ int main(){
                 else if(esai[i]==sec[j]&&i!=j){mal++;}
             }
         }
-        printf("\nnombre de chiffres bien places = %i et nombre de chiffres mal place = %i",bon,mal);
-        if(bon==7){return i;}
+        printf("\n nombre de chiffres bien places = %i et nombre de chiffres mal place = %i \n",bon,mal);
+        k++;
+        if(bon==6){
+            printf("good job");
+            return k;}
+        else if(k==10&&bon<6){return -1;}
+    }
         
         
     

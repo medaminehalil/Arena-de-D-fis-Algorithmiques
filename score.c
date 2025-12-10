@@ -75,7 +75,7 @@ void affichage (char fiche[]){
     int sc;
     int i=1;
     while (fscanf(f, "%s %s %d", nom, prenom,&sc) == 3) {
-        printf("%d %s %s %d\n",i,nom, prenom, sc);
+        printf("%d:%s %s %d\n",i,nom, prenom, sc);
         i++;
         
     }
