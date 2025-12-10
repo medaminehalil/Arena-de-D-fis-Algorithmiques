@@ -43,7 +43,7 @@ void echanger(Tableau *t, int i, int j) {
 int main() {
     Tableau t = {.size = TAILLE};
     
-    printf("=== 🎮 DÉFI : TRI ULTIME ===\n");
+    printf("===   DÉFI : TRI ULTIME ===\n");
     printf("Vous devez trier le tableau en effectuant des échanges manuels.\n");
     printf("Vous avez droit à %d échanges maximum.\n\n", MAX_ECHANGES);
 
@@ -114,4 +114,5 @@ int main() {
     }
 
     return 0;
+
 }
