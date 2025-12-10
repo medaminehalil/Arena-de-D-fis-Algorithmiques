@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 #define TAILLE 10
-#define MAX_ECHANGES 25  // Limite d'opérations
+#define MAX_ECHANGES 25 
 
 typedef struct {
     int num[TAILLE];
@@ -55,7 +55,7 @@ int main() {
     for (int i = 0; i < TAILLE; i++) {
         trie[i] = t.num[i];
     }
-    // Tri rapide de la sauvegarde
+    
     for (int i = 0; i < TAILLE - 1; i++) {
         for (int j = i + 1; j < TAILLE; j++) {
             if (trie[i] > trie[j]) {
@@ -113,5 +113,6 @@ int main() {
     return 0;
 
 }
+
 
 
