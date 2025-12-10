@@ -76,7 +76,7 @@ int main() {
         afficher(&t);
 
         if (est_trie(&t)) {
-            printf("\n🎉 Bravo ! Vous avez trié le tableau en %d échange(s) !\n", nb_echanges);
+            printf("\n Bravo ! Vous avez trié le tableau en %d échange(s) !\n", nb_echanges);
             return 0;
         }
 
@@ -103,9 +103,9 @@ int main() {
 
     // Vérification finale
     if (est_trie(&t)) {
-        printf("\n🎉 Vous avez réussi au dernier coup !\n");
+        printf("\n Vous avez réussi au dernier coup !\n");
     } else {
-        printf("\n💥 Échec ! Vous avez dépassé la limite de %d échanges.\n", MAX_ECHANGES);
+        printf("\n Échec ! Vous avez dépassé la limite de %d échanges.\n", MAX_ECHANGES);
         printf("Le tableau trié était : ");
         for (int i = 0; i < TAILLE; i++) {
             printf("%d ", trie[i]);
@@ -116,3 +116,4 @@ int main() {
     return 0;
 
 }
+
