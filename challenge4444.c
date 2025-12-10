@@ -10,7 +10,6 @@ typedef struct {
     int size;
 } Tableau;
 
-// Affiche le tableau avec indices pour faciliter les échanges
 void afficher(const Tableau *t) {
     printf("Tableau : ");
     for (int i = 0; i < t->size; i++) {
@@ -52,7 +51,6 @@ int main() {
         scanf("%d", &t.num[i]);
     }
 
-    // Sauvegarde de la version triée pour info en cas d'échec (optionnel)
     int trie[TAILLE];
     for (int i = 0; i < TAILLE; i++) {
         trie[i] = t.num[i];
@@ -101,7 +99,6 @@ int main() {
         nb_echanges++;
     }
 
-    // Vérification finale
     if (est_trie(&t)) {
         printf("\n Vous avez réussi au dernier coup !\n");
     } else {
@@ -116,4 +113,5 @@ int main() {
     return 0;
 
 }
+
 
